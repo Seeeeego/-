@@ -1,7 +1,7 @@
 const drinks = [
-    {id:1,name:"水",price:120},
-    {id:2,name:"お茶",price:150},
-    {id:3,name:"コーヒー",price:130}
+    {id:1,name:"💧水",price:120},
+    {id:2,name:"🍵お茶",price:150},
+    {id:3,name:"☕️コーヒー",price:130}
 ];
 
 function Menu() {

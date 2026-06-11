@@ -1,0 +1,133 @@
+/* ==========================================
+   全体のリセットと基本設定
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================================
+   自販機本体のコンテナ
+   ========================================== */
+.vending-machine {
+    background-color: #1c83b7; /* 自販機っぽい赤色 */
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 4px solid #1c83b7;
+}
+
+/* タイトル */
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   商品ディスプレイエリア
+   ========================================== */
+.drink-showcase {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* JavaScriptで動的に追加される商品の見た目 */
+.drink-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.drink-item:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================
+   自販機の液晶画面（outputエリア）
+   ========================================== */
+#output {
+    background-color: #1a1a1a; /* ガラケーや液晶のような黒 */
+    color: #00ff66;           /* レトロな緑の蛍光文字 */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 80px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+    border: 2px solid #333;
+    white-space: pre-wrap;    /* JavaScriptの \n（改行）を有効にする */
+    box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.2);
+}
+
+/* ==========================================
+   操作パネル（入力とお金を入れるボタン）
+   ========================================== */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* お金を入れる入力欄 */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    text-align: right; /* 金額っぽく右寄せ */
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #1d3557;
+}
+
+/* ボタン全般の共通スタイル */
+button {
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #457b9d;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
