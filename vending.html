@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Web自動販売機</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
+        .vending-machine { background: white; padding: 20px; border-radius: 10px; max-width: 400px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .menu-item { padding: 10px; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; }
+        .form-group { margin: 15px 0; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, button { width: 100%; padding: 10px; box-sizing: border-box; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #007bff; color: white; border: none; font-size: 16px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #output { background: #333; color: #fff; padding: 15px; border-radius: 5px; min-height: 80px; white-space: pre-wrap; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <div class="vending-machine">
+        <h2>🥤 Web自動販売機</h2>
+        
+        <div id="menu-area"></div>
+
+        <div class="form-group">
+            <label for="money-input">1. お金を投入（円）:</label>
+            <input type="number" id="money-input" placeholder="例: 500">
+        </div>
+
+        <div class="form-group">
+            <label for="product-select">2. 商品を選択:</label>
+            <select id="product-select">
+                <option value="">-- 商品を選んでください --</option>
+            </select>
+        </div>
+
+        <button onclick="VendingMachine()">購入ボタンを押す</button>
+
+        <h3>コンソール出力</h3>
+        <div id="output">お金を入れて商品を選び、購入ボタンを押してください。</div>
+    </div>
+
+    <script src="zihanki.js"></script>
+    <script>
+        // ページが読み込まれたら、JS側にあるメニュー表示関数を即座に実行する
+        Menu();
+    </script>
+</body>
+</html>

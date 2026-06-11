@@ -22,7 +22,6 @@ function Menu() {
     drinks.forEach(function (drink) {
         console.log('[' + drink.id + '] ' + drink.name + ': ' + drink.price + '円');
     });
-    console.log('-----------------------------\n');
 }
 
 // 投入金額を受け取る
@@ -73,7 +72,7 @@ function checkPurchase(inputMoney, drink) {
         console.log('おつりは ' + change + ' 円です。');
     } else {
         console.log('お金が足りません。');
-        console.log('おつり（返却）: ' + inputMoney + ' 円');
+        console.log('おつり: ' + inputMoney + ' 円');
     }
 
     rl.close();
