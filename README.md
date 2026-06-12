@@ -22,7 +22,7 @@
   - Windowsの場合：start zihanki.html
   - Macの場合：open zihanki.html
 
-##　使用技術
+## 使用技術
 - JavaScript
 - CSS
 - HTML
